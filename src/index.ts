@@ -5,9 +5,13 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 
+import validdateEnv from '@/utils/validateEnv';
+
 // App Variables
 
 dotenv.config();
+
+validdateEnv();
 
 const port = process.env.PORT;
 
