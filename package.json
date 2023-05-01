@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "NODE_ENV=development nodemon",
     "build": "tsc && tsc-alias",
+    "lint": "eslint --ignore-path .gitignore --ext .ts src/",
+    "lint:fix": "npm run lint -- --fix",
     "start": "npm run build && NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
